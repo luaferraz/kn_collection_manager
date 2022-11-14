@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kayou_cards/core/routes/app_router.dart';
 import 'package:kayou_cards/core/routes/app_routes.dart';
+import 'package:kayou_cards/app/shared/themes/app_theme.dart';
 
 void main() async {
   // AppConfig.setEnvironment(Environment.heroku);
@@ -23,8 +24,8 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Agente parceiro Magalu',
-      // theme: AppThemes.theme,
+      title: 'kayou',
+      theme: AppThemes.darkTheme,
       onGenerateRoute: AppRouter.generateRoute,
       initialRoute: AppRoutes.dashboard,
     );
