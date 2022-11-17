@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kayou_cards/app/dashboard/view/dashboard_screen.dart';
+import 'package:kayou_cards/app/auth/presentation/view/login_screen.dart';
+import 'package:kayou_cards/app/dashboard/presentation/view/dashboard_screen.dart';
 import 'package:kayou_cards/app/home/presentation/view/home_screen.dart';
 import 'package:kayou_cards/core/routes/app_routes.dart';
 
@@ -16,7 +17,11 @@ class AppRouter {
           settings: settings,
           builder: (_) => const HomeScreen(),
         );
-
+      case AppRoutes.login:
+        return MaterialPageRoute(
+          settings: settings,
+          builder: (_) => const LoginScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

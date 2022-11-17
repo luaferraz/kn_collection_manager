@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kayou_cards/core/routes/app_routes.dart';
 
 class AppTopBarWidget extends StatelessWidget with PreferredSizeWidget {
   const AppTopBarWidget({super.key});
@@ -11,8 +12,15 @@ class AppTopBarWidget extends StatelessWidget with PreferredSizeWidget {
     return AppBar(
       automaticallyImplyLeading: true,
       // leading: leading,
-      title: Text("Paolla"),
-      // actions: actions,
+      title: Text("oi"),
+      actions: [
+        GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, AppRoutes.login);
+          },
+          child: CircleAvatar(),
+        )
+      ],
     );
   }
 }
