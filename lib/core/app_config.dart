@@ -25,7 +25,7 @@ class AppConfig {
 
 class _Config {
   static Map<String, dynamic> devConfig = {
-    "baseUrl": "https://localhost:7210/api",
+    "baseUrl": "https://localhost:7210/api/",
     "WHERE_AM_I": "dev"
   };
 

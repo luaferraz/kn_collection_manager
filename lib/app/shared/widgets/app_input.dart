@@ -68,8 +68,8 @@ class AppInput extends StatelessWidget {
       textInputAction: textInputAction,
       focusNode: focusNode,
       style: AppWidget.themeNotifier.value == ThemeMode.light
-          ? AppTextStyles.textInputDark
-          : AppTextStyles.textInput,
+          ? AppTextStyles.latoRegular()
+          : AppTextStyles.latoRegular(),
       onFieldSubmitted: (String text) {
         if (nextFocus != null) FocusScope.of(context).requestFocus(nextFocus);
       },
@@ -80,8 +80,8 @@ class AppInput extends StatelessWidget {
         filled: true,
         labelText: hintText,
         labelStyle: AppWidget.themeNotifier.value == ThemeMode.light
-            ? AppTextStyles.textInputDark
-            : AppTextStyles.textInput,
+            ? AppTextStyles.latoRegular()
+            : AppTextStyles.latoRegular(),
         suffixIcon: sulfixIcon
             ? obscureText
                 ? IconButton(
@@ -115,7 +115,7 @@ class AppInput extends StatelessWidget {
               width: 1.0),
           borderRadius: const BorderRadius.all(Radius.circular(16)),
         ),
-        errorStyle: AppTextStyles.textError,
+        errorStyle: AppTextStyles.latoRegular(),
         errorBorder: OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.red, width: 1.0),
           borderRadius: const BorderRadius.all(Radius.circular(16)),

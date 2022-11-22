@@ -1,86 +1,55 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'app_colors.dart';
+import 'package:kayou_cards/app/shared/themes/app_colors.dart';
 
 class AppTextStyles {
-  static final titleHome = GoogleFonts.lato(
-    fontSize: 32,
-    fontWeight: FontWeight.w600,
-    color: AppColors.lightGrey,
-  );
+  static TextStyle latoLight({
+    Color? color,
+    double? size,
+  }) =>
+      GoogleFonts.lato(
+        color: color ?? AppColors.black,
+        fontSize: size ?? 16,
+        fontWeight: FontWeight.w300,
+      );
 
-  static final titleHomeDark = GoogleFonts.lato(
-    fontSize: 32,
-    fontWeight: FontWeight.w600,
-    color: AppColors.darkGrey,
-  );
+  static TextStyle latoRegular({
+    Color? color,
+    double? size,
+  }) =>
+      GoogleFonts.lato(
+        color: color ?? AppColors.black,
+        fontSize: size ?? 16,
+        fontWeight: FontWeight.w400,
+      );
 
-  static final textButtonUnderline = GoogleFonts.lato(
-    fontSize: 16,
-    decoration: TextDecoration.underline,
-    color: AppColors.primary,
-  );
+  static TextStyle latoMedium({
+    Color? color,
+    double? size,
+  }) =>
+      GoogleFonts.lato(
+        color: color ?? AppColors.black,
+        fontSize: size ?? 16,
+        fontWeight: FontWeight.w500,
+      );
 
-  static final textError = GoogleFonts.lato(
-    fontSize: 16,
-    color: AppColors.red,
-  );
+  static TextStyle latoSemiBold({
+    Color? color,
+    double? size,
+  }) =>
+      GoogleFonts.lato(
+        color: color ?? AppColors.black,
+        fontSize: size ?? 16,
+        fontWeight: FontWeight.w600,
+      );
 
-  static final textPrimary = GoogleFonts.lato(
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-    color: AppColors.primary,
-  );
-
-  static final textInput = GoogleFonts.lato(
-    fontSize: 16,
-    color: AppColors.lightGrey,
-  );
-
-  static final textInputDark = GoogleFonts.lato(
-    fontSize: 16,
-    color: AppColors.darkGrey,
-  );
-
-  static final smallContentWhite = GoogleFonts.lato(
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-    color: AppColors.white,
-  );
-
-  static final smallerContent = GoogleFonts.lato(
-    fontSize: 13,
-    fontWeight: FontWeight.bold,
-    color: AppColors.lightGrey,
-  );
-
-  static final smallerContentDark = GoogleFonts.lato(
-    fontSize: 13,
-    fontWeight: FontWeight.bold,
-    color: AppColors.darkGrey,
-  );
-
-  static final titleSecondary = GoogleFonts.lato(
-    fontSize: 20,
-    fontWeight: FontWeight.w600,
-    color: AppColors.lightGrey,
-  );
-
-  static final titleSecondaryDark = GoogleFonts.lato(
-    fontSize: 20,
-    fontWeight: FontWeight.w600,
-    color: AppColors.darkGrey,
-  );
-
-  static final cardContentBig = GoogleFonts.lato(
-    fontSize: 25,
-    fontWeight: FontWeight.bold,
-    color: AppColors.black,
-  );
-
-  static final cardContentBigLight = GoogleFonts.lato(
-    fontSize: 25,
-    fontWeight: FontWeight.bold,
-    color: AppColors.white,
-  );
+  static TextStyle latoBold({
+    Color? color,
+    double? size,
+  }) =>
+      GoogleFonts.lato(
+        color: color ?? AppColors.primary,
+        fontSize: size ?? 18,
+        fontWeight: FontWeight.w700,
+      );
 }

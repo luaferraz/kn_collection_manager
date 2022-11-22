@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kayou_cards/app/auth/presentation/stores/login_store.dart';
+import 'package:kayou_cards/app/shared/themes/app_colors.dart';
 import 'package:kayou_cards/app/shared/themes/app_dimens.dart';
 import 'package:kayou_cards/app/shared/themes/app_text_styles.dart';
 import 'package:kayou_cards/app/shared/widgets/app_button_text.dart';
@@ -50,9 +51,8 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: Observer(
-        builder: (_) => Container(
+      body: SafeArea(
+        child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
       ),
-    ));
+    );
   }
 
   Widget _loginForm() {
@@ -101,9 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
               textInputAction: TextInputAction.next,
               nextFocus: _focusPassword,
             ),
-            SizedBox(
-              height: AppDimens.space * 2,
-            ),
+            SizedBox(height: AppDimens.space * 2),
             AppInput(
               errorText: _loginStore.errorMessage,
               hintText: "password",
@@ -123,16 +121,10 @@ class _LoginScreenState extends State<LoginScreen> {
               focusNode: _focusPassword,
             ),
             if (_loginStore.errorMessage != "")
-              SizedBox(
-                height: AppDimens.space,
-              ),
-            Text(
-              _loginStore.errorMessage,
-              style: AppTextStyles.textError,
-            ),
-            SizedBox(
-              height: AppDimens.space * 4,
-            ),
+              SizedBox(height: AppDimens.space),
+            Text(_loginStore.errorMessage,
+                style: AppTextStyles.latoBold(color: AppColors.red, size: 14)),
+            SizedBox(height: AppDimens.space * 4),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -141,10 +133,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     // Navigator.pushNamedAndRemoveUntil(
                     //     context, Routes.signUp, (route) => false);
                   },
-                  child: Text(
-                    "Sign up",
-                    style: AppTextStyles.textButtonUnderline,
-                  ),
+                  child: Text("Sign up",
+                      style:
+                          AppTextStyles.latoRegular(color: AppColors.primary)),
                 ),
                 AppButtonText(
                     content: "Login",
@@ -160,8 +151,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       final ret = await _loginStore.signIn();
 
                       if (ret) {
-                        Navigator.pushNamedAndRemoveUntil(
-                            context, AppRoutes.home, (route) => false);
+                        Navigator.pushNamed(context, AppRoutes.dashboard);
                       } else {
                         print("${_loginStore.errorMessage}");
                       }

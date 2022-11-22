@@ -54,6 +54,8 @@ abstract class _AuthDatasourceBase with Store {
 
     setCurrentUser(UserModel.fromJson(json.decode(ssoDTO.user)));
 
+    print(currentUser.userName);
+
     return true;
   }
 

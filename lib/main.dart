@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kayou_cards/core/routes/app_router.dart';
 import 'package:kayou_cards/core/routes/app_routes.dart';
 import 'package:kayou_cards/app/shared/themes/app_theme.dart';
+import 'package:kayou_cards/core/locators/service_locator.dart';
 
 void main() async {
   // AppConfig.setEnvironment(Environment.heroku);
@@ -12,7 +13,7 @@ void main() async {
   //   await SellerSheetsApi.init();
   // }
 
-  // await setupLocators();
+  setupLocator();
 
   runApp(const AppWidget());
 }

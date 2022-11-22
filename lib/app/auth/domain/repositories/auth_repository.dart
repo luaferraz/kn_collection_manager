@@ -1,7 +1,7 @@
 import 'package:kayou_cards/app/auth/domain/models/dtos/sign_in_dto.dart';
 import 'package:kayou_cards/app/auth/domain/models/dtos/sing_up_dto.dart';
 import 'package:kayou_cards/app/auth/domain/models/dtos/sso_dto.dart';
-import 'package:kayou_cards/core/http_service.dart';
+import 'package:kayou_cards/core/http/http_service.dart';
 import 'package:kayou_cards/core/sources/api_source.dart';
 
 // import '../sources/api.source.dart' as endpoints;
