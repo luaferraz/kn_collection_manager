@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kayou_cards/app/shared/themes/app_colors.dart';
 
-class AppButtonText extends StatelessWidget {
-  String content = "";
+class AppFilledButton extends StatelessWidget {
+  String text;
   double? width;
   double? height;
   double? fontSize;
@@ -10,9 +10,9 @@ class AppButtonText extends StatelessWidget {
   Color? bgColor;
   var onPressed;
 
-  AppButtonText(
+  AppFilledButton(
       {Key? key,
-      required this.content,
+      this.text = "",
       required this.onPressed,
       this.width,
       this.height,
@@ -44,7 +44,7 @@ class AppButtonText extends StatelessWidget {
           child: FittedBox(
             fit: BoxFit.contain,
             child: Text(
-              content,
+              text,
               style: TextStyle(
                 color: textColor ?? AppColors.white,
                 fontSize: fontSize ?? 18,

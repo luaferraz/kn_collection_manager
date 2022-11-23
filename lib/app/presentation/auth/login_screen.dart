@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:kayou_cards/app/auth/presentation/stores/login_store.dart';
+import 'package:kayou_cards/app/presentation/auth/login_store.dart';
 import 'package:kayou_cards/app/shared/themes/app_colors.dart';
 import 'package:kayou_cards/app/shared/themes/app_dimens.dart';
 import 'package:kayou_cards/app/shared/themes/app_text_styles.dart';
@@ -137,8 +137,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       style:
                           AppTextStyles.latoRegular(color: AppColors.primary)),
                 ),
-                AppButtonText(
-                    content: "Login",
+                AppFilledButton(
+                    text: "Login",
                     width: 115,
                     height: 41,
                     onPressed: () async {

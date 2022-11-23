@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kayou_cards/app/adm/presentation/views/adm_screen.dart';
-import 'package:kayou_cards/app/auth/presentation/views/login_screen.dart';
-import 'package:kayou_cards/app/dashboard/presentation/view/dashboard_screen.dart';
-import 'package:kayou_cards/app/home/presentation/views/home_screen.dart';
+import 'package:kayou_cards/app/presentation/adm/presentation/views/adm_screen.dart';
+import 'package:kayou_cards/app/presentation/auth/login_screen.dart';
+import 'package:kayou_cards/app/presentation/dashboard/dashboard_screen.dart';
+import 'package:kayou_cards/app/presentation/home/home_screen.dart';
 import 'package:kayou_cards/core/routes/app_routes.dart';
 
 class AppRouter {

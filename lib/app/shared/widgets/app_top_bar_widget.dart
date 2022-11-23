@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kayou_cards/app.dart';
-import 'package:kayou_cards/app/auth/data/datasources/auth_datasource.dart';
+import 'package:kayou_cards/app/data/datasources/auth_datasource.dart';
 import 'package:kayou_cards/app/shared/themes/app_colors.dart';
 import 'package:kayou_cards/app/shared/themes/app_dimens.dart';
 import 'package:kayou_cards/app/shared/themes/app_text_styles.dart';
@@ -49,8 +49,7 @@ class AppTopBarWidget extends StatelessWidget with PreferredSizeWidget {
           onTap: () {
             if (authService.currentUser.userName == "") {
               Navigator.pushNamed(context, AppRoutes.login);
-            }
-            if (authService.currentUser.userName == "lua") {
+            } else if (authService.currentUser.userName == "lua") {
               Navigator.pushNamed(context, AppRoutes.adm);
             }
           },
