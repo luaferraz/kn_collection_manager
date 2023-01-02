@@ -44,11 +44,12 @@ abstract class _AuthDatasourceBase with Store {
   }
 
   Future<bool> signIn(SignInDto signInDto) async {
-    final retSignIn = await HttpService()
-        .instance
-        .post(ApiSource().signIn, data: signInDto.toJson());
+    final response = await HttpService().post(
+      ApiSource().signIn,
+      data: signInDto.toJson(),
+    );
 
-    var ssoDTO = SsoDTO.fromJson(retSignIn.data);
+    var ssoDTO = SsoDTO.fromJson(response);
 
     LocalStorageSource.setString(
         LocalStorageKeys.access_token, ssoDTO.access_token);

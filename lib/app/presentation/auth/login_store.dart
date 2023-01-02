@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:kayou_cards/app/data/datasources/auth_datasource.dart';
 import 'package:kayou_cards/app/data/models/dtos/sign_in_dto.dart';
-import 'package:kayou_cards/core/locators/service_locator.dart';
+import 'package:kayou_cards/core/service_locator.dart';
 import 'package:kayou_cards/core/sources/local_storage_source.dart';
 import 'package:mobx/mobx.dart';
 

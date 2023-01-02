@@ -6,7 +6,7 @@ import 'package:kayou_cards/app/shared/themes/app_dimens.dart';
 import 'package:kayou_cards/app/shared/themes/app_text_styles.dart';
 import 'package:kayou_cards/core/app_config.dart';
 import 'package:kayou_cards/core/routes/app_routes.dart';
-import 'package:kayou_cards/core/locators/service_locator.dart';
+import 'package:kayou_cards/core/service_locator.dart';
 
 enum _MenuValues {
   logout,
@@ -14,7 +14,11 @@ enum _MenuValues {
 }
 
 class AppTopBarWidget extends StatelessWidget with PreferredSizeWidget {
-  AppTopBarWidget({super.key});
+  String? title;
+  AppTopBarWidget({
+    this.title,
+    super.key,
+  });
 
   final authService = serviceLocator<AuthDatasource>();
 
@@ -42,6 +46,12 @@ class AppTopBarWidget extends StatelessWidget with PreferredSizeWidget {
                   ),
                 )
               : Container(),
+          Text(
+            title ?? "",
+            style: AppTextStyles.latoBold(
+              color: AppColors.black,
+            ),
+          ),
         ],
       ),
       actions: [

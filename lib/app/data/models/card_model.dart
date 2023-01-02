@@ -1,4 +1,5 @@
 class CardModel {
+  String code;
   String imgUrl;
   String characterName;
   String rarity;
@@ -6,6 +7,7 @@ class CardModel {
   String tierWave;
 
   CardModel({
+    this.code = "",
     this.imgUrl = "",
     this.characterName = "",
     this.rarity = "",
@@ -15,6 +17,7 @@ class CardModel {
 
   static CardModel fromJson(Map<String, dynamic> json) {
     final obj = CardModel(
+      code: json['code'] ?? "",
       imgUrl: json['imgUrl'] ?? "",
       characterName: json['characterName'] ?? "",
       rarity: json['rarity'] ?? "",
@@ -27,6 +30,7 @@ class CardModel {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
+    data['code'] = code;
     data['imgUrl'] = imgUrl;
     data['characterName'] = characterName;
     data['rarity'] = rarity;
